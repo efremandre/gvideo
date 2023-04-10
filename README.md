@@ -1,5 +1,5 @@
-# [Одностраничный сайт магазина шин и дисков >>](https://shinstore.ru/).
-# [Электронная визитка для магазина шин и дисков >>](https://shinstore.ru/business-card.html).
+# [Одностраничный сайт магазина охранных систем ВидеоСтраж >>](https://ohransystem.ru/).
+# [Электронная визитка для магазина ВидеоСтраж >>](https://ohransystem.ru/business-card.html).
 
 ## Задачи
 Создать платформу, для привлечения клиентов через рекламу и представительства магазина в интернете.
@@ -27,4 +27,4 @@
 * Swiper* 
 
   QR-code для эл. визитки
->![gr-red middle](https://user-images.githubusercontent.com/25119216/221472309-f4f86ee3-cadc-4e9e-9a46-4dfcadf2b7ff.png)
+>![gr-red middle]()
