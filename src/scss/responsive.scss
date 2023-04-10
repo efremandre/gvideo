@@ -1,0 +1,144 @@
+@use './base/variable' as var;
+@use './base/mixin' as mix;
+@use './base/extentsions';
+
+@media screen and (min-width: 1200px) {
+  .container-bcard {
+    flex-direction: row;
+    gap: 20px;
+    max-width: 1000px;
+  }
+
+  .header-bcard {
+    &__wrapper {
+      @include mix.displayFlex(flex, center, center);
+      flex-direction: column;
+      height: 100%;
+      box-sizing: border-box;
+      border-radius: 8px;
+    }
+  }
+
+  .main-bcard {
+    padding: 0;
+  }
+
+  .footer-bcard {
+    &__wrapper {
+      @include mix.displayFlex(flex, center, center);
+      height: 100%;
+      border-radius: 8px;
+    }
+  }
+}
+
+@media screen and (max-width: 989.98px) {
+
+}
+
+@media screen and (max-width: 769.98px) {
+  .navigation {
+    opacity: 1;
+    &__wrapper {
+      justify-content: space-between;
+    }
+
+    &__logo {
+
+    }
+
+    &__logo-link {
+    }
+
+    &__block {
+      @include mix.displayFlex(flex, start, center);
+      gap: 0 20px;
+    }
+
+    &__phone {
+
+    }
+
+    &__icon {
+    }
+
+    &__link {
+
+    }
+  }
+
+  .phone {
+    &__link {
+      font-size: 14px;
+
+      &:after {
+
+      }
+
+      &:hover {
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 569.98px) {
+  .container {
+    padding: 0 1em;
+  }
+
+  .logo {
+    width: 60px;
+  }
+
+  .navigation {
+    &__phone {
+      display: none;
+    }
+  }
+
+  .fullscreen {
+    &__buttons {
+      width: 100%;
+      gap: 15px;
+    }
+  }
+
+  .brands {
+    padding-bottom: 0;
+  }
+
+  .main-bcard {
+    padding: 1em;
+  }
+}
+
+@media screen and (max-width: 429.98px) {
+
+  .fullscreen {
+
+  }
+
+}
+
+@media screen and (max-width: 319.98px) {
+  .container {
+    padding: 0 0.5em;
+  }
+
+  .wrapper-bcard {
+    padding: 0;
+  }
+
+  .social-bgcard {
+    &__list {
+      display: block;
+
+      &>li {
+        margin-bottom: 1em;
+      }
+    }
+  }
+}
+
+@media (any-hover: none) and (orientation: landscape) {}

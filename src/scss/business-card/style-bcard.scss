@@ -1,0 +1,7 @@
+@use '../base/variable' as var;
+@use '../base/mixin' as mix;
+@use '../base/extentsions';
+@use 'global-style-bcard';
+@use 'header-bcard';
+@use 'main-bcard';
+@use 'footer-bcard';

@@ -1,0 +1,75 @@
+@use '../base/variable' as var;
+@use '../base/mixin' as mix;
+@use '../base/extentsions';
+
+.wrapper-bcard {
+  @include mix.displayFlex(flex, center, center);
+  min-height: 100%;
+  text-align: center;
+  color: var.$lightColor;
+  background: var.$bg-color;
+}
+
+.container-bcard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  min-height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var.$bg-color;
+}
+
+.general-bcard {
+  overflow: hidden;
+  border-radius: 8px;
+  background: var.$card-bg-color;
+  box-shadow: var.$shadow;
+}
+
+.link-bcard {
+  @include mix.displayFlex(flex, center, center);
+  flex-direction: column;
+  padding: 2em 1em;
+  transition: opacity .5s ease-in;
+
+  &>span {
+    display: block;
+  }
+
+  @media (any-hover: hover) {
+      &:hover {
+        opacity: .6;
+      }
+  }
+}
+
+.icon-wrapper {
+  height: 30px;
+  width: 30px;
+  margin-bottom: .5em;
+}
+
+.bcard-wa {
+  background: url('../../assets/images/business-card/wa.svg') center center no-repeat;
+}
+.bcard-tg {
+  background: url('../../assets/images/business-card/tg.svg') center center no-repeat;
+}
+.bcard-avito {
+  background: url('../../assets/images/business-card/avito.svg') center center no-repeat;
+}
+.bcard-vk {
+  background: url('../../assets/images/business-card/vk.svg') center center no-repeat;
+}
+.bcard-site {
+  background: url('../../assets/images/business-card/site.svg') center center / contain no-repeat;
+}
+.bcard-phone {
+  background: url('../../assets/images/business-card/phone.svg') center center / contain no-repeat;
+}
+.bcard-route {
+  background: url('../../assets/images/business-card/route.svg') center center / contain no-repeat;
+}

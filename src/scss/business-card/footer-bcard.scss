@@ -1,0 +1,18 @@
+@use '../base/variable' as var;
+@use '../base/mixin' as mix;
+@use '../base/extentsions';
+
+.footer-bcard {
+  &__wrapper {
+    border-radius: 8px 8px 0 0;
+    box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1);
+  }
+
+  &__link {
+    padding-bottom: 1em;
+  }
+
+  &__icon {
+    background: url('../../assets/images/business-card/contact.svg') center center / contain no-repeat;
+  }
+}

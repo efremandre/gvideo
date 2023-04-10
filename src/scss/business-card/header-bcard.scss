@@ -1,0 +1,19 @@
+@use '../base/variable' as var;
+@use '../base/mixin' as mix;
+@use '../base/extentsions';
+
+.header-bcard {
+  &__wrapper {
+    padding: 1.5em;
+    border-radius: 0 0 8px 8px;
+  }
+
+  &__logotype {
+    @include mix.displayFlex(flex, center, center);
+    margin-bottom: 1em;
+  }
+
+  &__regulations {
+    text-align: center;
+  }
+}

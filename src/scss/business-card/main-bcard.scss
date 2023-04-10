@@ -1,0 +1,44 @@
+@use '../base/variable' as var;
+@use '../base/mixin' as mix;
+@use '../base/extentsions';
+
+.main-bcard {
+  flex: 1 1 auto;
+  padding: 1em 0;
+
+  &__wrapper-buttons {
+    &>div {
+      margin-bottom: 1em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+  }
+}
+
+.social-bgcard {
+  &__list {
+    @include mix.displayFlex(flex, center, center);
+    gap: 1em;
+
+    &>li {
+      flex: 0 1 25%;
+      height: 80px;
+    }
+  }
+
+  &__link {
+    display: block;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 10px;
+  }
+
+  &__icon-wrapper {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+}

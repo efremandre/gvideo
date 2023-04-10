@@ -1,0 +1,10 @@
+@use '../base/variable' as var;
+@use 'fullscreen';
+@use 'brands';
+@use 'catalog';
+@use 'contact';
+@use '../modules/modal-img';
+
+.main {
+	flex: 1 1 auto;
+}
