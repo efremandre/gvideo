@@ -4,5 +4,18 @@
 @use '../modules/button-dawn';
 
 .main__catalog {
-  padding: 1em 0;
+  padding: 3em 0;
+}
+
+.brands {
+  &__wrapper {
+    @include mix.displayFlex(flex, space-between, center);
+    gap: 15px;
+  }
+}
+
+.catalog {
+  &__title {
+    margin: 1em 0;
+  }
 }

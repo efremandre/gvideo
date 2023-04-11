@@ -5,7 +5,7 @@
 
 .footer {
   padding: 2em 0;
-  @include mix.adaptivFont(16, 9);
+  @include mix.adaptivFont(14, 8);
   line-height: 1.3em;
   color: var.$lightColor;
   background-color: var.$darkColor;
@@ -27,11 +27,21 @@
 
   &__requisites {
     padding: 0 1em;
+    text-align: center;
+    flex: 0 1 500px;
     &>p>a {
+      display: inline-block;
+      margin-top: 4px;
+      text-decoration: underline;
       &:hover {
-        text-decoration: underline;
+        text-decoration: none;
       }
     }
+  }
+
+  .info {
+    @include mix.adaptivFont(12, 8);
+    line-height: 1;
   }
 
   &__author {

@@ -5,19 +5,22 @@
 $sizeAfterEl: 1.1em;
 .navigation {
   position: fixed;
-  z-index: 9998;
+  z-index: 3;
   width: 100%;
   box-sizing: border-box;
   top: 0;
   left: 0;
   color: var.$lightColor;
-  background: var.$darkColor;
+  background: rgba(14, 46, 74, 0.8);
   box-shadow: 0 4px 7px -5px rgba(1, 1, 1, 0.5);
-  opacity: .8;
   transition: transform .8s ease;
 
   &._hidden {
-    transform: translateY(-90%);
+    transform: translateY(-150%);
+  }
+
+  &__zero-block {
+    flex: 0 1 200px;
   }
 
   &__wrapper {
@@ -83,13 +86,13 @@ $sizeAfterEl: 1.1em;
       left: 18px;
       width: 0;
       height: 2px;
-      background: var.$accentColor;
+      background: var.$lightColor;
       transition: width .5s ease-in-out, color .5s ease-in-out;
     }
 
     @media (any-hover: hover) {
       &:hover{
-        color: var.$accentColor;
+        color: var.$lightColor;
         &:before {
           width: 70%;
         }

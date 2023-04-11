@@ -11,14 +11,39 @@ export function animationScroll() {
 	let options = {
 		threshold: [0.5] };
 	let observer = new IntersectionObserver(onEntry, options);
-	let indexAnimation = document.querySelectorAll('.animation');
-	// let bcardAnimation = document.querySelectorAll('.bcard-animation');
+	let animationBtn = document.querySelectorAll('.buttons-animation');
+	let animation = document.querySelectorAll('.animation');
+	let animationTitle = document.querySelectorAll('.animationTitle');
+	let animationTop = document.querySelectorAll('.animationTop');
+	let animationBottom = document.querySelectorAll('.animationBottom');
+	let animationLeft = document.querySelectorAll('.animationLeft');
+	let animationRight = document.querySelectorAll('.animationRight');
 
-	for (let elm of indexAnimation) {
+	for (let elm of animationBtn) {
 		observer.observe(elm);
 	}
 
-	// for (let elm of bcardAnimation) {
-	// 	observer.observe(elm);
-	// }
+	for (let elm of animation) {
+		observer.observe(elm);
+	}
+
+	for (let elm of animationTitle) {
+		observer.observe(elm);
+	}
+
+	for (let elm of animationTop) {
+		observer.observe(elm);
+	}
+
+	for (let elm of animationBottom) {
+		observer.observe(elm);
+	}
+
+	for (let elm of animationLeft) {
+		observer.observe(elm);
+	}
+
+	for (let elm of animationRight) {
+		observer.observe(elm);
+	}
 }

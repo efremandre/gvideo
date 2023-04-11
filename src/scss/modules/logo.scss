@@ -4,8 +4,11 @@
 
 .logo {
   @include mix.displayFlex(flex, center, center);
+}
 
-  &__link {
-
-  }
+.navigation__logo {
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  box-shadow: 0 4px 7px -5px rgba(1, 1, 1, 0.5);
 }

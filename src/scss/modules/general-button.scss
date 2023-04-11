@@ -7,12 +7,12 @@
   width: 100%;
   max-width: 270px;
   padding: 1em;
-  @include mix.adaptivFont(var.$generalBigTextSize, var.$generalBigTextSizeMin);
+  @include mix.adaptivFont(var.$generalTextSize, var.$generalTextSizeMin);
   color: var.$lightColor;
-  line-height: var.$generalBigLineHeight;
+  line-height: var.$generalLineHeight;
   font-weight: 400;
   background: var.$accentColorTwo;
-  border-radius: 5px;
+  border-radius: 8px;
   transition: box-shadow .5s ease, opacity .5s ease;
   text-shadow: 3px 1px 2px rgba(28,28,28,0.3);
 

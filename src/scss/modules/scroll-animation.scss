@@ -1,13 +1,63 @@
 @use '../base/variable' as var;
 @use '../base/extentsions';
 
-.animation {
+.buttons-animation {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(40px);
   &.element-show {
     opacity: 1;
-    transition: transform .8s ease, opacity .8s ease;
+    transition: transform 3s ease, opacity 3s ease;
     transform: translateY(0%);
+  }
+}
+
+.animation {
+  opacity: 0;
+  transform: translateY(40px);
+  &.element-show {
+    opacity: 1;
+    transition: transform 1s ease, opacity 1s ease;
+    transform: translateY(0%);
+  }
+}
+
+.animationTitle {
+  opacity: 0;
+  transform: translateY(200px);
+  &.element-show {
+    opacity: 1;
+    transition: transform 2s ease, opacity 1s ease;
+    transform: translateY(0%);
+  }
+}
+
+.animationTop{
+  opacity: 0;
+  transform: translateY(-200px);
+  &.element-show {
+    opacity: 1;
+    transition: transform 2s ease, opacity 1s ease;
+    transform: translateY(0%);
+  }
+}
+
+.animationLeft {
+  opacity: 0;
+  transform: translateX(-40px);
+  &.element-show {
+    opacity: 1;
+    transition: transform 1s ease, opacity 1s ease;
+    transform: translateX(0%);
+  }
+}
+
+.animationRight {
+  opacity: 0;
+  transform: translateX(40px);
+  &.element-show {
+    opacity: 1;
+    transition: transform 1s ease, opacity 1s ease;
+    transform: translateX(0%);
   }
 }
 
@@ -16,7 +66,7 @@
   transform: scale(0);
   &.element-show {
     opacity: 1;
-    transition: transform .8s ease, opacity .8s ease;
+    transition: transform 1s ease, opacity 1s ease;
     transform: scale(1);
   }
 }

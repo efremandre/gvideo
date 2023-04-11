@@ -5,41 +5,44 @@
 
 .main__fullscreen {
   position: relative;
-}
-
-.container__row {
-
+  text-shadow: 0 4px 4px rgba(0, 0, 0, .6);
 }
 
 .fullscreen {
-  @include mix.displayFlex(flex, start, center);
+  @include mix.displayFlex(flex, center, start);
   min-height: 100vh;
-  background: #ccc url('../../assets/images/bg-main.jpg') top center / cover no-repeat;
+  background: #ccc url('../../assets/images/hero/bg-hero.jpg') top center / cover no-repeat;
   @media (any-hover: hover) {
     background-attachment: fixed;
   }
 
+  &__wrapper-image {
+    height: 400px;
+    background: url("../../assets/images/hero/camera-hero.png") center -40px / contain no-repeat;
+  }
+
   &__wrapper {
-    @include mix.displayFlex(flex, center, flex-start);
+    @include mix.displayFlex(flex, center, center);
     flex-direction: column;
     position: relative;
-    padding-bottom: 2em;
+    padding-bottom: 1em;
+    text-align: center;
+    letter-spacing: 0.02em;
   }
 
   &__main-title {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.3em;
   }
 
   &__subtitle {
     @include mix.adaptivFont(20, var.$generalBigTextSizeMin);
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     color: #FFFFFF;
   }
 
   &__buttons {
-    @include mix.displayFlex(flex, start, center);
+    @include mix.displayFlex(flex, center, center);
     width: 100%;
-    gap: 20px;
   }
 
   &__button {

@@ -1,0 +1,44 @@
+@use '../base/variable' as var;
+@use '../base/mixin' as mix;
+@use '../base/extentsions';
+@use '../modules/button-dawn';
+
+.main__about-us {
+  padding: 3em 0;
+  background: var.$accentColor;
+}
+
+.about-us {
+  &__row {
+    @include mix.displayFlex(flex, start, start);
+    margin: 0 -2em;
+  }
+
+  &__content {
+    flex: 0 1 60%;
+    padding: 0 2em;
+  }
+  
+  &__title {
+    color: var.$lightColor;
+    text-align: left;
+  }
+
+  &__text {
+    margin: 1.5em 0;
+    padding-right: 2em;
+    &>p {
+      color: var.$lightColor;
+      margin-bottom: 1em;
+    }
+  }
+
+  &__image {
+    flex: 0 1 40%;
+    height: 500px;
+    padding: 0 2em;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #fff url('../../assets/images/imageabout.jpg') center center / cover no-repeat;
+  }
+}
