@@ -21,8 +21,8 @@
     width: 40px;
     height: 40px;
     padding: 0;
-    border-radius: 3px;
-    border: 2px solid var.$darkColor;
+    border-radius: 8px;
+    border: 2px solid var.$accentColor;
     background: var.$lightColor;
     opacity: .8;
     transition: all .5s ease-out;
@@ -40,11 +40,8 @@
    @media (hover: hover) and (pointer: fine) {
      &:hover {
        cursor: pointer;
-       background: var.$darkColor;
+       opacity: .6;
        transform: translateY(-2px);
-       &:after {
-         background: url("../../../assets/images/icon/arrow-up-hover.svg") center center / contain no-repeat;
-       }
      }
    }
   }
