@@ -994,34 +994,20 @@ button.swiper-pagination-bullet {
   font-style: normal;
 }
 @font-face {
-  font-family: Manrope;
+  font-family: Mont;
   font-display: swap;
-  src: url("../assets/fonts/Manrope-Bold.woff2") format("woff2"), url("../assets/fonts/Manrope-Bold.woff") format("woff");
+  src: url("../assets/fonts/Mont-Bold.woff2") format("woff2"), url("../assets/fonts/Mont-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: fontello;
+  font-family: Mont;
   font-display: swap;
-  src: url("../assets/fonts/fontello.woff2") format("woff2"), url("../assets/fonts/fontello.woff") format("woff");
+  src: url("../assets/fonts/Mont-Regular.woff2") format("woff2"), url("../assets/fonts/Mont-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
-@font-face {
-  font-family: Manrope;
-  font-display: swap;
-  src: url("../assets/fonts/Manrope-Semibold.woff2") format("woff2"), url("../assets/fonts/Manrope-Semibold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: Manrope;
-  font-display: swap;
-  src: url("../assets/fonts/Manrope-Regular.woff2") format("woff2"), url("../assets/fonts/Manrope-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-.burger:before, .burger:after, .nav__link:before, .phone__link:after, .form-preloader, .form-preloader:before {
+.burger:before, .burger:after, .card__title-wrapper::before, .nav__link:before, .phone__link:after, .form-preloader, .form-preloader:before {
   position: absolute;
   content: "";
 }
@@ -1031,7 +1017,7 @@ body {
   height: 100%;
   scrollbar-color: #267DC9 #fff;
   scrollbar-width: thin;
-  font-family: "Mont", "Arial", "Helvetica", sans-serif;
+  font-family: "Circle", "Arial", "Helvetica", sans-serif;
   font-weight: 400;
   line-height: 1.5em;
   letter-spacing: 0.02em;
@@ -1075,7 +1061,7 @@ p {
 }
 
 a {
-  font-family: "Mont", "Arial", "Helvetica", sans-serif;
+  font-family: "Circle", "Arial", "Helvetica", sans-serif;
   text-decoration: none;
   color: #fff;
 }
@@ -1559,7 +1545,7 @@ a:focus {
 .subtitle {
   margin: 0;
   font-size: calc(22px + 10 * ((100vw - 320px) / 1200));
-  font-family: "Circe", "Arial", "Helvetica", sans-serif;
+  font-family: "Mont", "Arial", "Helvetica", sans-serif;
   font-weight: 700;
   line-height: 1.5em;
   color: #1D1B1B;
@@ -1616,7 +1602,7 @@ a:focus {
   top: 0;
   left: 0;
   color: #fff;
-  background: rgba(14, 46, 74, 0.8);
+  background: rgba(14, 46, 74, 0.9);
   box-shadow: 0 4px 7px -5px rgba(1, 1, 1, 0.5);
   transition: transform 0.8s ease;
 }
@@ -1842,15 +1828,147 @@ a:focus {
   padding: 3em 0;
 }
 
+.brands {
+  position: relative;
+  padding: 1em 0;
+  overflow: hidden;
+}
 .brands__wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
-  gap: 15px;
+  animation: marquee 200s linear infinite;
+}
+.brands__wrapper-image {
+  padding: 0 50px;
+  flex-shrink: 0;
 }
 
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 .catalog__title {
   margin: 1em 0;
+}
+
+.card {
+  position: relative;
+  height: 500px;
+  max-width: 380px;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(23, 77, 124, 0.3);
+  border-radius: 8px;
+}
+.card__image-wrapper {
+  padding: 40px;
+}
+.card__title-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(385px);
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  text-align: center;
+  color: #fff;
+  border-top-right-radius: 18px;
+  border-top-left-radius: 18px;
+  background: rgb(14, 46, 74);
+  transition: 0.8s transform ease;
+}
+.card__title-wrapper::before {
+  z-index: -1;
+  top: -16px;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  background: rgb(14, 46, 74);
+}
+.card__title {
+  margin-top: 0.5em;
+}
+.card__subtitle {
+  margin-bottom: 1em;
+}
+.card__list {
+  text-align: left;
+}
+.card__item {
+  margin-bottom: 0.5em;
+}
+.card__slider-container {
+  position: relative;
+}
+@media (any-hover: hover) {
+  .card:hover {
+    cursor: pointer;
+  }
+  .card:hover .card__title-wrapper {
+    transform: translateY(0);
+  }
+}
+
+.swiper {
+  max-width: 1200px;
+  padding: 20px 20px;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 26px;
+  color: #fff;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  top: 60%;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: #267DC9;
+  transition: 0.8s opacity ease, 0.4s transform ease;
+}
+@media (any-hover: hover) {
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+    opacity: 0.6;
+  }
+}
+.swiper-button-next:active,
+.swiper-button-prev:active {
+  transform: scale(0.8);
+}
+
+.swiper-button-next {
+  right: 6%;
+}
+
+.swiper-button-prev {
+  left: 6%;
+}
+
+.swiper-pagination > span {
+  background: #267DC9;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 26px;
 }
 
 .main__about-us {
@@ -1882,11 +2000,46 @@ a:focus {
 }
 .about-us__image {
   flex: 0 1 40%;
-  height: 500px;
+  min-height: 480px;
   padding: 0 2em;
   overflow: hidden;
   border-radius: 8px;
   background: #fff url("../assets/images/imageabout.jpg") center center/cover no-repeat;
+}
+
+.main__about-services {
+  padding: 3em 0;
+  background: rgb(14, 46, 74);
+}
+
+.about-services__row {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  margin: 0 -2em;
+}
+.about-services__content {
+  flex: 0 1 60%;
+  padding: 0 2em 0 4em;
+}
+.about-services__title {
+  color: #fff;
+  text-align: left;
+}
+.about-services__text {
+  margin: 1.5em 0;
+}
+.about-services__text > p {
+  color: #fff;
+  margin-bottom: 1em;
+}
+.about-services__image {
+  flex: 0 1 40%;
+  min-height: 400px;
+  padding: 0 2em;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #fff url("../assets/images/mont.jpg") center center/cover no-repeat;
 }
 
 .modal {

@@ -3,12 +3,12 @@
 @use '../base/extentsions';
 @use '../modules/button-dawn';
 
-.main__about-us {
+.main__about-services {
   padding: 3em 0;
   background: var.$accentColor;
 }
 
-.about-us {
+.about-services {
   &__row {
     @include mix.displayFlex(flex, start, start);
     margin: 0 -2em;
@@ -16,7 +16,7 @@
 
   &__content {
     flex: 0 1 60%;
-    padding: 0 2em;
+    padding: 0 2em 0 4em;
   }
   
   &__title {
@@ -26,7 +26,6 @@
 
   &__text {
     margin: 1.5em 0;
-    padding-right: 2em;
     &>p {
       color: var.$lightColor;
       margin-bottom: 1em;
@@ -35,10 +34,10 @@
 
   &__image {
     flex: 0 1 40%;
-    min-height: 480px;
+    min-height: 400px;
     padding: 0 2em;
     overflow: hidden;
     border-radius: 8px;
-    background: #fff url('../../assets/images/imageabout.jpg') center center / cover no-repeat;
+    background: #fff url('../../assets/images/mont.jpg') center center / cover no-repeat;
   }
 }
