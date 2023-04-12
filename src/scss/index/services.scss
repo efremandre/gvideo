@@ -1,0 +1,104 @@
+@use '../base/variable' as var;
+@use '../base/mixin' as mix;
+@use '../base/extentsions';
+@use '../modules/button-dawn';
+
+.main__services {
+  padding: 3em 0;
+}
+
+.services {
+  height: auto;
+  scrollbar-color: #223c50 #f3f3f4;
+  scrollbar-width: thin;
+
+  &__title {
+    margin-bottom: 1em;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 50px 70px;
+    margin: .5em;
+    transition: transform .5s ease-in;
+  }
+
+  &__card {
+    height: 300px;
+  }
+}
+
+.card {
+  &__image-wrapper_services {
+    padding: 0;
+  }
+
+  &__title-wrapper_services {
+    padding: 10px;
+  }
+  
+  &__image-wrapper_syssec {
+    height: 100%;
+    width: 100%;
+    background: var.$accentColorTwo url("../../assets/images/services/smartsystem.jpg") center center/ cover no-repeat;
+  }
+
+  &__image-wrapper_syssec {
+    height: 100%;
+    width: 100%;
+    background: var.$accentColorTwo url("../../assets/images/services/smartsystem.jpg") center center/ cover no-repeat;
+  }
+
+  &__image-wrapper_sysvideo {
+    height: 100%;
+    width: 100%;
+    background: var.$accentColorTwo url("../../assets/images/services/videosys.jpg") center center/ cover no-repeat;
+  }
+
+  &__image-wrapper_scs {
+    height: 100%;
+    width: 100%;
+    background: var.$accentColorTwo url("../../assets/images/services/scs.jpg") center center/ cover no-repeat;
+  }
+
+  &__image-wrapper_scud {
+    height: 100%;
+    width: 100%;
+    background: var.$accentColorTwo url("../../assets/images/services/scut.jpg") center center/ cover no-repeat;
+  }
+
+  &__image-wrapper_vols {
+    height: 100%;
+    width: 100%;
+    background: var.$accentColorTwo url("../../assets/images/services/vols.jpg") center center/ cover no-repeat;
+  }
+  
+  &__title-wrapper_services {
+    transform: translateY(71%);
+
+    &::before {
+      @extend %pseudoElement;
+      top: -12px;
+      height: 40px;
+      width: 100%;
+    }
+  }
+
+  &__subtitle_services {
+    margin: 1em 0;
+    @include mix.adaptivFont(14, 10);
+    line-height: 120%;
+  }
+
+  &__title-wrapper_services-list {
+    height: 100%;
+    @include mix.adaptivFont(14, 10);
+    border-radius: 0;
+    transform: translateY(0);
+
+    &::before {
+      display: none;
+    }
+  }
+}

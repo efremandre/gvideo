@@ -6,6 +6,9 @@
 @use 'privacy/privacy';
 @use 'business-card/style-bcard';
 @use './modules/form';
+@use './modules/swiper';
+@use './modules/cards';
+@use './modules/ticker';
 @use './modules/scroll-animation';
 @use './modules/scrollbar';
 @use './modules/button-up';

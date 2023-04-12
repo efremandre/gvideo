@@ -1,0 +1,75 @@
+@use '../base/variable' as var;
+@use '../base/mixin' as mix;
+@use '../base/extentsions';
+@use '../modules/button-dawn';
+
+.card {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(23, 77, 124, .3);
+  border-radius: 8px;
+
+  &__image-wrapper {
+
+  }
+  
+  &__title-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+    color: var.$lightColor;
+    border-top-right-radius: 18px;
+    border-top-left-radius: 18px;
+    background: var.$accentColor;
+    transition: .8s transform ease;
+
+    &::before {
+      @extend %pseudoElement;
+      z-index: -1;
+      left: 0;
+      width: 100%;
+      border-top-left-radius: 100%;
+      border-top-right-radius: 100%;
+      background: var.$accentColor;
+      transition: .8s transform ease, 1s border-radius ease;
+    }
+  }
+
+  &__title {
+    margin-top: .5em;
+  }
+
+  &__subtitle {
+    margin-bottom: 1em;
+  }
+  
+  &__list {
+    text-align: left;
+  }
+
+  &__item {
+    margin-bottom: .5em;
+  }
+
+  &__slider-container {
+    position: relative;
+  }
+  
+  @media (any-hover: hover) {
+      &:hover {
+        cursor: pointer;
+        .card__title-wrapper {
+          transform: translateY(0);
+          &::before {
+            border-radius: 0;
+          }
+        }
+      }
+  }
+}

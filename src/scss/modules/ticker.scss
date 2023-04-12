@@ -1,0 +1,33 @@
+@use '../base/variable' as var;
+@use '../base/extentsions';
+
+.ticker {
+  position: relative;
+  overflow: hidden;
+  background: var.$accentColorTwo;
+}
+
+.ticker__wrapper {
+  display: flex;
+}
+
+.ticker__item {
+  color: var.$lightColor;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 130%;
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 0 50px;
+  animation: ticker 10s linear infinite;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateZ(0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+

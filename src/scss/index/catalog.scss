@@ -35,132 +35,31 @@
   &__title {
     margin: 1em 0;
   }
+
+  &__card {
+    height: 500px;
+    max-width: 380px;
+  }
 }
 
 .card {
-  position: relative;
-  height: 500px;
-  max-width: 380px;
-  overflow: hidden;
-  box-sizing: border-box;
-  box-shadow: 0 4px 8px rgba(23, 77, 124, .3);
-  border-radius: 8px;
-
-  &__image-wrapper {
+  &__image-wrapper_catalog {
     padding: 40px;
   }
-  
-  &__title-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateY(385px);
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
+
+  &__title-wrapper_catalog {
     padding: 10px 20px;
-    text-align: center;
-    color: var.$lightColor;
-    border-top-right-radius: 18px;
-    border-top-left-radius: 18px;
-    background: var.$accentColor;
-    transition: .8s transform ease;
+  }
+  
+  &__title-wrapper_catalog {
+    transform: translateY(78%);
 
     &::before {
       @extend %pseudoElement;
-      z-index: -1;
       top: -16px;
-      left: 0;
       height: 50px;
       width: 100%;
-      border-top-left-radius: 100%;
-      border-top-right-radius: 100%;
-      background: var.$accentColor;
     }
   }
 
-  &__title {
-    margin-top: .5em;
-  }
-
-  &__subtitle {
-    margin-bottom: 1em;
-  }
-  
-  &__list {
-    text-align: left;
-  }
-
-  &__item {
-    margin-bottom: .5em;
-  }
-
-  &__slider-container {
-    position: relative;
-  }
-  
-  @media (any-hover: hover) {
-      &:hover {
-        cursor: pointer;
-        .card__title-wrapper {
-          transform: translateY(0);
-        }
-      }
-  }
-}
-
-.swiper {
-  max-width: 1200px;
-  padding: 20px 20px;
-}
-
-.swiper-button-next:after,
-.swiper-button-prev:after {
-  font-size: 26px;
-  color: var.$lightColor;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  top: 60%;
-  width: 50px;
-  height: 50px;
-  box-sizing: border-box;
-  border-radius: 50%;
-  background: var.$accentColorTwo;
-  transition: .8s opacity ease, .4s transform ease;
-
-  @media (any-hover: hover) {
-      &:hover {
-        opacity: .6;
-      }
-  }
-
-  &:active {
-    transform: scale(.8);
-  }
-}
-
-.swiper-button-next {
-  right: 6%;
-}
-
-.swiper-button-prev {
-  left: 6%;
-}
-
-.swiper-pagination {
-
-  &>span {
-    background: var.$accentColorTwo;
-  }
-}
-
-.swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-}
-
-.swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: 26px;
 }
