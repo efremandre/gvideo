@@ -93,10 +93,10 @@
       box-sizing: border-box;
       color: var.$lightColor;
       outline: none;
-      border-radius: 5px;
+      border-radius: 8px;
       border: none;
       border-bottom: 1px solid #fff;
-      background: rgba(10, 10, 10, .9);
+      background: var.$lightColor;
 
       transition: box-shadow .3s ease, border-bottom-color .3s ease;
 
@@ -128,8 +128,10 @@
   }
 
   &__check {
-    @include mix.adaptivFont(14, 10);
-    &>label>a {
+    @include mix.adaptivFont(8, 6);
+    text-align: center;
+    &>p>a {
+      font-size: 8px;
       text-decoration: underline;
       &:hover {
         text-decoration: none;
