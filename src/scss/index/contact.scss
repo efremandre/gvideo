@@ -9,9 +9,8 @@
 
 .contact {
   @include mix.displayFlex(flex, center, center);
-  min-height: 80vh;
   color: var.$lightColor;
-  background: var.$accentColor;
+  background: var.$accentColor url("../../assets/images/bg-contacts.jpg") center center / cover no-repeat;
   @media (any-hover: hover) {
     background-attachment: fixed;
   }
@@ -31,7 +30,7 @@
     @include mix.displayFlex(flex, center, center);
     flex-direction: column;
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     margin: 0 auto;
     padding: 0 1em;
   }
@@ -47,6 +46,10 @@
 
   &__list {
     @include mix.displayFlex(flex, center, center);
+  }
+
+  &__form-container {
+    width: 100%;
   }
 
   &__button {

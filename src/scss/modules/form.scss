@@ -53,12 +53,12 @@
   right: 0;
   min-height: 30px;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
   padding: 1em;
   color: var.$darkColor;
   @include mix.adaptivFont(16, 14);
-  border-radius: 5px;
+  border-radius: 8px;
   background: var.$lightColor;
   box-shadow: 4px 2px 11px 1px rgba(1, 1, 1, .6);
   opacity: 0;
@@ -72,16 +72,6 @@
 }
 
 .form {
-  &__check {
-    &>input,
-    &>label {
-      @media (any-hover: hover) {
-        &:hover {
-          cursor: pointer;
-        }
-      }
-    }
-  }
 
   &__input {
     position: relative;
@@ -91,11 +81,10 @@
       margin-bottom: 1em;
       padding: 1em;
       box-sizing: border-box;
-      color: var.$lightColor;
+      color: var.$darkColor;
       outline: none;
       border-radius: 8px;
       border: none;
-      border-bottom: 1px solid #fff;
       background: var.$lightColor;
 
       transition: box-shadow .3s ease, border-bottom-color .3s ease;
@@ -105,7 +94,7 @@
       &:-webkit-autofill:focus,
       &:-webkit-autofill:active {
         -webkit-box-shadow: 0 0 0 30px var.$darkColor inset !important;
-        -webkit-text-fill-color: var.$lightColor !important;
+        -webkit-text-fill-color: var.$darkColor !important;
         -webkit-backdrop-filter: unset;
       }
 
@@ -128,10 +117,12 @@
   }
 
   &__check {
-    @include mix.adaptivFont(8, 6);
+    margin-top: 1em;
+    @include mix.adaptivFont(12, 8);
+    line-height: 1.2em;
     text-align: center;
     &>p>a {
-      font-size: 8px;
+      font-size: 12px;
       text-decoration: underline;
       &:hover {
         text-decoration: none;

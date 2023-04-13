@@ -1321,12 +1321,12 @@ a:focus {
   right: 0;
   min-height: 30px;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
   padding: 1em;
   color: #111111;
   font-size: calc(14px + 2 * ((100vw - 320px) / 1200));
-  border-radius: 5px;
+  border-radius: 8px;
   background: #fff;
   box-shadow: 4px 2px 11px 1px rgba(1, 1, 1, 0.6);
   opacity: 0;
@@ -1338,11 +1338,6 @@ a:focus {
   transform: translateY(50px);
 }
 
-@media (any-hover: hover) {
-  .form__check > input:hover, .form__check > label:hover {
-    cursor: pointer;
-  }
-}
 .form__input {
   position: relative;
 }
@@ -1351,17 +1346,16 @@ a:focus {
   margin-bottom: 1em;
   padding: 1em;
   box-sizing: border-box;
-  color: #fff;
+  color: #111111;
   outline: none;
   border-radius: 8px;
   border: none;
-  border-bottom: 1px solid #fff;
   background: #fff;
   transition: box-shadow 0.3s ease, border-bottom-color 0.3s ease;
 }
 .form__input > input:-webkit-autofill, .form__input > input:-webkit-autofill:hover, .form__input > input:-webkit-autofill:focus, .form__input > input:-webkit-autofill:active, .form__input > textarea:-webkit-autofill, .form__input > textarea:-webkit-autofill:hover, .form__input > textarea:-webkit-autofill:focus, .form__input > textarea:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px #111111 inset !important;
-  -webkit-text-fill-color: #fff !important;
+  -webkit-text-fill-color: #111111 !important;
   -webkit-backdrop-filter: unset;
 }
 .form__input > input:focus, .form__input > textarea:focus {
@@ -1378,11 +1372,13 @@ a:focus {
   resize: none;
 }
 .form__check {
-  font-size: calc(6px + 2 * ((100vw - 320px) / 1200));
+  margin-top: 1em;
+  font-size: calc(8px + 4 * ((100vw - 320px) / 1200));
+  line-height: 1.2em;
   text-align: center;
 }
 .form__check > p > a {
-  font-size: 8px;
+  font-size: 12px;
   text-decoration: underline;
 }
 .form__check > p > a:hover {
@@ -1743,11 +1739,21 @@ a:focus {
   text-align: center;
 }
 
+.social {
+  position: relative;
+}
 .social__list {
   display: flex;
   justify-content: start;
   align-items: center;
   gap: 18px;
+}
+@media (any-hover: hover) {
+  .social__item:hover .social__label {
+    visibility: visible;
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 .social__icon {
   width: 2.5em;
@@ -1760,7 +1766,21 @@ a:focus {
   }
 }
 .social__label {
-  display: none;
+  z-index: 3;
+  position: absolute;
+  display: block;
+  top: -150%;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+  left: 0;
+  width: 100%;
+  padding: 1em;
+  text-align: center;
+  color: #fff;
+  border-radius: 8px;
+  background: #267DC9;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .logo {
@@ -2092,7 +2112,7 @@ a:focus {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 50px 70px;
-  margin: 0.5em;
+  margin: 2em 0;
   transition: transform 0.5s ease-in;
 }
 .services__card {
@@ -2166,9 +2186,8 @@ a:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;
   color: #fff;
-  background: rgb(14, 46, 74);
+  background: rgb(14, 46, 74) url("../assets/images/bg-contacts.jpg") center center/cover no-repeat;
 }
 @media (any-hover: hover) {
   .contact {
@@ -2192,7 +2211,7 @@ a:focus {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
   padding: 0 1em;
 }
@@ -2207,6 +2226,9 @@ a:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.contact__form-container {
+  width: 100%;
 }
 .contact__button {
   max-width: 100%;

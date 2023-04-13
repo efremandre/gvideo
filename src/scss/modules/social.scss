@@ -3,9 +3,22 @@
 @use '../base/extentsions';
 
 .social {
+  position: relative;
   &__list {
     @include mix.displayFlex(flex, start, center);
     gap: 18px
+  }
+
+  &__item {
+    @media (any-hover: hover) {
+      &:hover {
+        .social__label {
+          visibility: visible;
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+    }
   }
 
   &__icon {
@@ -21,6 +34,20 @@
   }
 
   &__label {
-    display: none;
+    z-index: 3;
+    position: absolute;
+    display: block;
+    top: -150%;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    left: 0;
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    color: var.$lightColor;
+    border-radius: 8px;
+    background: var.$accentColorTwo;
+    transition: transform .5s ease, opacity .5s ease;
   }
 }
