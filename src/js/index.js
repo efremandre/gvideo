@@ -1,4 +1,5 @@
 import { hello } from './modules/_hello.js';
+import {map} from "./modules/_map.js";
 import { burger } from './modules/_burger.js';
 import { initSlider } from "./modules/_initSlider.js";
 import { animationScroll } from "./modules/_animationScroll.js";
@@ -9,6 +10,7 @@ import { sendForm } from "./modules/_form.js";
 import {animationBcard} from "./modules/_animationBcard.js";
 
 hello();
+map();
 burger();
 initSlider();
 animationScroll();

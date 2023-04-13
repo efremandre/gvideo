@@ -22,13 +22,13 @@
   }
 
   &__icon {
-    width: 2.5em;
-    height: 2.5em;
+    width: 2.6em;
+    height: 2.6em;
     transition: box-shadow .3s ease;
 
     @media (any-hover: hover) {
       &:hover {
-        box-shadow: 1px 10px 11px -4px rgba(1, 1, 1, 0.6);
+        box-shadow: 1px 10px 11px -4px rgba(1, 1, 1, 0.3);
       }
     }
   }
@@ -37,17 +37,20 @@
     z-index: 3;
     position: absolute;
     display: block;
-    top: -150%;
+    box-sizing: border-box;
+    top: -130%;
+    left: 0;
     visibility: hidden;
     opacity: 0;
     transform: scale(0);
-    left: 0;
     width: 100%;
-    padding: 1em;
+    margin: 0 auto;
+    padding: .8em;
     text-align: center;
     color: var.$lightColor;
     border-radius: 8px;
     background: var.$accentColorTwo;
+    box-shadow: 0 10px 8px -4px rgba(1, 1, 1, 0.3);
     transition: transform .5s ease, opacity .5s ease;
   }
 }
