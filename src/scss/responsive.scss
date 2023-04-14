@@ -34,9 +34,18 @@
 
 @media screen and (max-width: 989.98px) {
 
+  .swiper-button-next {
+    right: 0;
+  }
+
+  .swiper-button-prev {
+    left: 0;
+  }
+
   .main {
     &__about-us,
-    &__about-services {
+    &__about-services,
+    &__contact {
       padding: 2em 0;
     }
   }
@@ -64,6 +73,8 @@
     }
 
     &__image-wrapper {
+      flex: 0 1 auto;
+      width: 100%;
       padding: 0;
     }
 
@@ -81,7 +92,7 @@
     }
 
     &__content {
-
+      padding: 0 1em;
     }
 
     &__title {
@@ -96,20 +107,30 @@
     }
 
     &__image-wrapper {
-
-
-      &>img {
-        
-      }
+      flex: 0 1 auto;
+      width: 100%;
+      padding: 0;
     }
 
     &__button {
       margin: 0 auto;
     }
   }
+
+  .services {
+    &__grid {
+      grid-gap: 30px;
+    }
+  }
 }
 
 @media screen and (max-width: 769.98px) {
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+
   .navigation {
     opacity: 1;
     &__wrapper {
@@ -156,18 +177,47 @@
 
   .about-us {
     &__row {
-      margin: 0;
+      gap: 20px;
     }
 
     &__content {
-
+      padding: 0;
     }
 
     &__title {
-
     }
 
     &__text {
+      margin: 1em 0 0 0;
+      &>p {
+        margin-bottom: 0.5em;
+      }
+    }
+
+    &__image-wrapper {
+      padding: 0;
+    }
+
+    &__buttons {
+      display: none;
+    }
+  }
+
+  .about-services {
+    &__row {
+      gap: 20px;
+    }
+
+    &__content {
+      padding: 0;
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__text {
+      margin-bottom: 1.5em;
       &>p {
 
       }
@@ -175,10 +225,14 @@
 
     &__image-wrapper {
 
+
+      &>img {
+
+      }
     }
 
-    &__image {
-
+    &__button {
+      margin: 0 auto;
     }
   }
 }
@@ -209,6 +263,28 @@
     padding-bottom: 0;
   }
 
+  .services {
+
+    &__wrapper-card {
+      overflow-x: scroll;
+    }
+
+    &__grid {
+      grid-template-columns: repeat(6, 300px);
+      grid-template-rows: repeat(1, 1fr);
+    }
+  }
+
+  .card {
+    &__title-wrapper_services {
+      transform: translateY(73%);
+    }
+
+    &__title-wrapper_services-list {
+      transform: translateY(0);
+    }
+  }
+
   .main-bcard {
     padding: 1em;
   }
@@ -228,7 +304,7 @@
   }
 
   .footer {
-
+    text-align: center;
     &__wrapper {
       display: block;
     }

@@ -1479,7 +1479,7 @@ a:focus {
   height: 12px;
 }
 
-.swiper-pagination-bullets.swiper-pagination-horizontal {
+.swiper-pagination-bullets .swiper-pagination-horizontal {
   bottom: -20px;
 }
 
@@ -2095,9 +2095,6 @@ a:focus {
 .catalog__slider-container {
   position: relative;
 }
-.catalog__card {
-  max-width: 380px;
-}
 
 .card__image-wrapper_catalog {
   margin-bottom: 110px;
@@ -2198,13 +2195,13 @@ a:focus {
   padding: 3em 0;
 }
 
-.services {
-  height: auto;
-  scrollbar-color: #223c50 #f3f3f4;
-  scrollbar-width: thin;
-}
 .services__title {
   margin-bottom: 1em;
+}
+.services__wrapper-card {
+  scrollbar-color: #267DC9 #FFFFFF;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
 }
 .services__grid {
   display: grid;
@@ -2565,7 +2562,13 @@ a:focus {
   }
 }
 @media screen and (max-width: 989.98px) {
-  .main__about-us, .main__about-services {
+  .swiper-button-next {
+    right: 0;
+  }
+  .swiper-button-prev {
+    left: 0;
+  }
+  .main__about-us, .main__about-services, .main__contact {
     padding: 2em 0;
   }
   .about-us__row {
@@ -2581,6 +2584,8 @@ a:focus {
     margin: 1em 0 1.5em 0;
   }
   .about-us__image-wrapper {
+    flex: 0 1 auto;
+    width: 100%;
     padding: 0;
   }
   .about-us__buttons {
@@ -2592,17 +2597,32 @@ a:focus {
     gap: 30px;
     margin: 0;
   }
+  .about-services__content {
+    padding: 0 1em;
+  }
   .about-services__title {
     text-align: center;
   }
   .about-services__text {
     margin-bottom: 1.5em;
   }
+  .about-services__image-wrapper {
+    flex: 0 1 auto;
+    width: 100%;
+    padding: 0;
+  }
   .about-services__button {
     margin: 0 auto;
   }
+  .services__grid {
+    grid-gap: 30px;
+  }
 }
 @media screen and (max-width: 769.98px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
   .navigation {
     opacity: 1;
   }
@@ -2619,7 +2639,37 @@ a:focus {
     font-size: 14px;
   }
   .about-us__row {
-    margin: 0;
+    gap: 20px;
+  }
+  .about-us__content {
+    padding: 0;
+  }
+  .about-us__text {
+    margin: 1em 0 0 0;
+  }
+  .about-us__text > p {
+    margin-bottom: 0.5em;
+  }
+  .about-us__image-wrapper {
+    padding: 0;
+  }
+  .about-us__buttons {
+    display: none;
+  }
+  .about-services__row {
+    gap: 20px;
+  }
+  .about-services__content {
+    padding: 0;
+  }
+  .about-services__title {
+    text-align: center;
+  }
+  .about-services__text {
+    margin-bottom: 1.5em;
+  }
+  .about-services__button {
+    margin: 0 auto;
   }
 }
 @media screen and (max-width: 569.98px) {
@@ -2639,6 +2689,19 @@ a:focus {
   .brands {
     padding-bottom: 0;
   }
+  .services__wrapper-card {
+    overflow-x: scroll;
+  }
+  .services__grid {
+    grid-template-columns: repeat(6, 300px);
+    grid-template-rows: repeat(1, 1fr);
+  }
+  .card__title-wrapper_services {
+    transform: translateY(73%);
+  }
+  .card__title-wrapper_services-list {
+    transform: translateY(0);
+  }
   .main-bcard {
     padding: 1em;
   }
@@ -2648,6 +2711,9 @@ a:focus {
   }
 }
 @media screen and (max-width: 429.98px) {
+  .footer {
+    text-align: center;
+  }
   .footer__wrapper {
     display: block;
   }

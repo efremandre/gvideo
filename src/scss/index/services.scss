@@ -8,12 +8,15 @@
 }
 
 .services {
-  height: auto;
-  scrollbar-color: #223c50 #f3f3f4;
-  scrollbar-width: thin;
 
   &__title {
     margin-bottom: 1em;
+  }
+
+  &__wrapper-card {
+    scrollbar-color: var.$accentColorTwo #FFFFFF;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
   }
 
   &__grid {
