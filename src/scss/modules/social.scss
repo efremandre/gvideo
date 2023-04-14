@@ -24,11 +24,11 @@
   &__icon {
     width: 2.6em;
     height: 2.6em;
-    transition: box-shadow .3s ease;
+    transition: opacity .3s ease;
 
     @media (any-hover: hover) {
       &:hover {
-        box-shadow: 1px 10px 11px -4px rgba(1, 1, 1, 0.3);
+        opacity: .7;
       }
     }
   }
@@ -50,7 +50,7 @@
     color: var.$lightColor;
     border-radius: 8px;
     background: var.$accentColorTwo;
-    box-shadow: 0 10px 8px -4px rgba(1, 1, 1, 0.3);
+    box-shadow: 0 10px 8px -4px rgba(1, 1, 1, 0.2);
     transition: transform .5s ease, opacity .5s ease;
   }
 }

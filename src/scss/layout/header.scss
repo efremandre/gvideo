@@ -10,6 +10,7 @@ $sizeAfterEl: 1.1em;
   box-sizing: border-box;
   top: 0;
   left: 0;
+  padding: .5em 0;
   color: var.$lightColor;
   background: rgba(14, 46, 74, 0.9);
   box-shadow: 0 4px 7px -5px rgba(1, 1, 1, 0.5);
@@ -20,7 +21,7 @@ $sizeAfterEl: 1.1em;
   }
 
   &__zero-block {
-    flex: 0 1 200px;
+    flex: 0 1 220px;
   }
 
   &__wrapper {
@@ -42,13 +43,6 @@ $sizeAfterEl: 1.1em;
     @include mix.displayFlex(flex, flex-end, flex-end);
     flex-direction: column;
     padding: 1em 0;
-    &>p {
-      margin: 5px 0 0;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 1em;
-      text-align: right;
-    }
   }
 
   &__worktime {
@@ -106,7 +100,7 @@ $sizeAfterEl: 1.1em;
     position: relative;
     padding-left: 1.5em;
     font-weight: 400;
-    @include mix.adaptivFont(var.$generalTextSize, var.$generalTextSizeMin);
+    @include mix.adaptivFont(18, var.$generalTextSizeMin);
 
     &:after {
       @extend %pseudoElement;

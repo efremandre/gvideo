@@ -5,7 +5,6 @@
 
 .main__fullscreen {
   position: relative;
-  text-shadow: 0 4px 4px rgba(0, 0, 0, .6);
 }
 
 .fullscreen {
@@ -17,14 +16,24 @@
   }
 
   &__wrapper-image {
+    @include mix.displayFlex(flex, center, center);
     height: 400px;
-    background: url("../../assets/images/hero/camera-hero.png") center -40px / contain no-repeat;
+    margin-bottom: 1.5em;
+    background: url("../../assets/images/hero/camera-hero.png") center -60px / contain no-repeat;
+  }
+
+  &__feature-body {
+    @include mix.displayFlex(flex, center, center);
+    flex-direction: column;
+    text-align: center;
+    color: var.$lightColor;
   }
 
   &__wrapper {
     @include mix.displayFlex(flex, center, center);
     flex-direction: column;
     position: relative;
+    width: 100%;
     padding-bottom: 1em;
     text-align: center;
     letter-spacing: 0.02em;
@@ -67,5 +76,70 @@
     &__button_call {
       display: none;
     }
+  }
+}
+
+.feature-top-left {
+  transform: translateX(-250px);
+  animation: top-left 2s ease;
+}
+
+.feature-top-right {
+  transform: translateX(220px);
+  animation: top-right 2s ease;
+}
+
+.feature-bottom-left {
+  transform: translate3d(-150px, 100px, 0);
+  animation: bottom-left 2s ease;
+}
+
+.feature-bottom-right {
+  transform: translate3d(120px, 100px, 0);
+  animation: bottom-right 2s ease;
+}
+
+
+@keyframes top-left {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-250px);
+  }
+}
+
+@keyframes top-right {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(220px);
+  }
+}
+
+@keyframes bottom-left {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0 , 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(-150px, 100px, 0);
+  }
+}
+
+@keyframes bottom-right {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0 , 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(120px, 100px, 0);
   }
 }

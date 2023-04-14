@@ -8,8 +8,7 @@ export function animationScroll() {
 		});
 	}
 
-	let options = {
-		threshold: [0.5] };
+	let options = { threshold: [0.5] };
 	let observer = new IntersectionObserver(onEntry, options);
 	let animationBtn = document.querySelectorAll('.buttons-animation');
 	let animation = document.querySelectorAll('.animation');

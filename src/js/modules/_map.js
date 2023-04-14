@@ -3,8 +3,8 @@ export function map() {
 	ymaps.ready(function () {
 		var myMap = new ymaps.Map('map', {
 				behaviors: ['drag', 'pinchZoom', 'mouseTilt'],
-				center: [45.212143739589784,39.678185495104785],
-				zoom: 18,
+				center: [45.21206032023454,39.678137215342524],
+				zoom: 18
 			}
 			),
 			// Создаём макет содержимого.
@@ -12,25 +12,26 @@ export function map() {
 				'<div style="color: #000; font-weight: bold;">$[properties.iconContent]</div>'
 			),
 			MyLabelLayout = ymaps.templateLayoutFactory.createClass(
-				'<div><a class="map__label" href="https://yandex.ru/maps/20693/ust-labinsk/house/krasnaya_ulitsa_176/Z0AYcABoSEQOQFpvfX5wcHRqbA==/?ll=39.678119%2C45.211898&z=16.75">$[properties.labelContent]</a></div>'
+				'<div class="map__label"><p>$[properties.labelContent]</p><p><time>$[properties.labelTime]</time></p></div>'
 			),
 
 			myPlacemarkWithContent = new ymaps.Placemark([45.211898, 39.678119], {
 				iconContent: ''
 			}, {
 				iconLayout: 'default#imageWithContent',
-				iconImageHref: '../../assets/images/logoForMap.svg',
-				iconImageSize: [200, 200],
-				iconImageOffset: [-100, -210],
+				iconImageHref: '../../assets/images/logoForMap.png',
+				iconImageSize: [130, 200],
+				iconImageOffset: [-65, -210],
 				iconContentOffset: [10, -20],
 				iconContentLayout: MyIconContentLayout
 			}),
 			myPlacemark = new ymaps.Placemark([45.211898, 39.678119], {
-				labelContent: 'г. Усть-Лабинск <br> ул. Красная 176'
+				labelContent: 'г. Усть-Лабинск <br> ул. Красная 176',
+				labelTime: 'ПН-ПТ 9:00 - 18:00 <br> СБ 9:00 - 15:00'
 				}, {
 					iconLayout: 'default#imageWithContent',
 					iconImageHref: '',
-					iconContentOffset: [-120, 40],
+					iconContentOffset: [-115, 20],
 					iconContentLayout: MyLabelLayout
 				}
 			);

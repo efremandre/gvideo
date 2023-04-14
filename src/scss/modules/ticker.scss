@@ -4,7 +4,7 @@
 .ticker {
   position: relative;
   overflow: hidden;
-  background: var.$accentColorTwo;
+  padding: .5em 0;
 }
 
 .ticker__wrapper {
@@ -19,15 +19,39 @@
   white-space: nowrap;
   flex-shrink: 0;
   padding: 0 50px;
-  animation: ticker 10s linear infinite;
 }
 
-@keyframes ticker {
-  0% {
-    transform: translateZ(0);
-  }
-  to {
-    transform: translate3d(-100%, 0, 0);
+.services__ticker_garant {
+  transform: rotate(.5deg);
+  background: var.$accentColorTwo;
+  & .ticker__item {
+    animation: ticker 10s linear infinite;
   }
 }
+
+.services__ticker_free {
+  transform: rotate(-.5deg);
+  background: var.$accentColor;
+  & .ticker__item {
+    animation: tickerFree 15s linear infinite;
+  }
+}
+
+  @keyframes ticker {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+
+  @keyframes tickerFree {
+    0% {
+      transform: translate3d(-100%, 0, 0);
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
 

@@ -86,8 +86,7 @@
       border-radius: 8px;
       border: none;
       background: var.$lightColor;
-
-      transition: box-shadow .3s ease, border-bottom-color .3s ease;
+      transition: box-shadow .3s ease;
 
       &:-webkit-autofill,
       &:-webkit-autofill:hover,
@@ -99,15 +98,7 @@
       }
 
       &:focus {
-        box-shadow: 1px 10px 11px -4px rgba(1, 1, 1, 0.4);
-        border-bottom-color: #000;
-      }
-
-      @media (any-hover: hover) {
-        &:hover {
-          box-shadow: 1px 10px 11px -4px rgba(1, 1, 1, 0.4);
-          border-bottom-color: #000;
-        }
+        box-shadow: 0 10px 8px -4px rgba(154, 154, 154, .3);
       }
     }
 

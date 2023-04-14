@@ -56,7 +56,7 @@
                             <ul class="nav__list">
                                 <li><a href="#aboutUs" class="nav__link">О нас</a></li>
                                 <li><a href="#catalog" class="nav__link">Хит продаж</a></li>
-                                <li><a href="#service" class="nav__link">Услуги</a></li>
+                                <li><a href="#services" class="nav__link">Услуги</a></li>
                                 <li><a href="#contact" class="nav__link">Контакты</a></li>
                                 <li class="nav__item-hidden"><a href="tel:+79180865982" class="nav__link">+7(918) 086-59-82</a></li>
                             </ul>
@@ -65,9 +65,6 @@
                             <div class="navigation__contactinfo">
                                 <div class="navigation__phone phone">
                                     <a href="tel:+79180865982" class="phone__link" title="Телефон ВидеоСтраж">+7(918) 086-59-82</a>
-                                    <p>
-                                        <tieme>ПН-ПТ 9:00 - 18:00, СБ 9:00 - 15:00</tieme>
-                                    </p>
                                 </div>
                                 <div class="navigation__worktime">
 
@@ -91,12 +88,41 @@
         <main class="main">
             <section class="main__fullscreen fullscreen">
                 <div class="container">
-                    <div class="fullscreen__wrapper-image animationTop"></div>
+                    <div class="fullscreen__wrapper-image animationTop">
+                        <div class="fullscreen__feature-blocks">
+                            <div class="fullscreen__feature feature-top-left">
+                                <div class="fullscreen__feature-body">
+                                    <img src="./assets/images/icon/chek.svg" alt="">
+                                    <p>Профессиональный<br>монтаж</p>
+                                </div>
+                            </div>
+                            <div class="fullscreen__feature feature-bottom-left">
+                                <div class="fullscreen__feature-body">
+                                    <img src="./assets/images/icon/chek.svg" alt="">
+                                    <p>Низкие цены</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fullscreen__feature-blocks">
+                            <div class="fullscreen__feature feature-top-right">
+                                <div class="fullscreen__feature-body">
+                                    <img src="./assets/images/icon/chek.svg" alt="">
+                                    <p>Установка под <br>ключ</p>
+                                </div>
+                            </div>
+                            <div class="fullscreen__feature feature-bottom-right">
+                                <div class="fullscreen__feature-body">
+                                    <img src="./assets/images/icon/chek.svg" alt="">
+                                    <p>Гарантия</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="fullscreen__wrapper animationTitle">
-                        <h1 class="fullscreen__main-title main-title">Магазин охранных систем<br>и видеонаблюдения<br>«ВидеоСтраж»
+                        <h1 class="fullscreen__main-title main-title">Магазин охранных систем и видеонаблюдения<br>«ВидеоСтраж»
                         </h1>
                         <p class="fullscreen__subtitle">
-                            Мы предлагаем самые современные решения <br> для защиты вашего дома, бизнеса и имущества
+                            Мы предлагаем самые современные решения для защиты вашего дома, бизнеса и имущества
                         <div class="fullscreen__buttons buttons-animation">
                             <a title="Написать магазину ВидеоСтраж в WhatsApp" href="https://wa.me/79898132303" class="fullscreen__button button">Напишите нам</a>
                         </div>
@@ -109,6 +135,9 @@
             <section id="aboutUs" class="main__about-us about-us">
                 <div class="container">
                     <div class="about-us__row">
+                        <div class="about-us__image-wrapper animationRight">
+                            <img src="./assets/images/imageabout.jpg" alt="Безопасность">
+                        </div>
                         <div class="about-us__content animationLeft">
                             <h2 class="about-us__title subtitle">Безопасность это главное</h2>
                             <div class="about-us__text">
@@ -119,16 +148,12 @@
                                 <p>У нас представлен широкий ассортимент товаров камер, сигнализаций, датчиков движения, систем видеонаблюдения. В наличии и под заказ. Мы предлагаем только высококачественную продукцию проверенных брендов,
                                     рассчитанные на эксплуатацию в суровых условиях как внутри, так и вне помещений.</p>
                             </div>
-                            <div class="about-us__buttons">
-                                <a title="Написать магазину ВидеоСтраж в WhatsApp" href="https://wa.me/79898132303" class="about-us__button button">Перейти к безопасности</a>
-                            </div>
                         </div>
-                        <div class="about-us__image animationRight"></div>
                     </div>
                 </div>
             </section>
-            <section id="catalog" class="main__catalog catalog animation">
-                <div class="catalog__brands brands">
+            <section id="catalog" class="main__catalog catalog">
+                <div class="catalog__brands brands animation">
                     <div class="brands__wrapper">
                         <div class="brands__wrapper-image"><img src="./assets/images/brands/hikvision.svg" alt="Hikvision" title="Hikvision" width="200" height="60" class="brands__image"></div>
                         <div class="brands__wrapper-image"><img src="./assets/images/brands/dahua.svg" alt="Dahua" title="Dahua" width="200" height="60" class="brands__image"></div>
@@ -142,113 +167,16 @@
                         <div class="brands__wrapper-image"><img src="./assets/images/brands/imou.svg" alt="Imou" title="Imou" width="200" height="60" class="brands__image"></div>
                     </div>
                 </div>
-                <h2 class="catalog__title subtitle">Хит продаж</h2>
-                <div class="catalog__slider-container">
+                <h2 class="catalog__title subtitle animation">Хит продаж</h2>
+                <div class="catalog__slider-container animation">
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="catalog__card card">
-                                    <div class="card__image-wrapper card__image-wrapper_catalog"><img src="./assets/images/catalog/hiwatch.jpg" alt="HiWatch DS-T200A"></div>
-                                    <div class="card__title-wrapper card__title-wrapper_catalog">
-                                        <h3 class="card__title card__title_catalog">HiWatch DS-T200A<br>Камера WiFi уличная (2.8 mm)<br>3790 ₽ / шт</h3>
-                                        <p class="card__subtitle card__subtitle_catalog">Технические характеристики</p>
-                                        <ul class="card__list card__list_catalog">
-                                            <li class="card__item card__item_catalog">Матрица — 1/2.7 CMOS</li>
-                                            <li class="card__item card__item_catalog">Разрешение — 2,0 Мп (1920×1080)</li>
-                                            <li class="card__item card__item_catalog">Режимы работы — TVI, AHD, CVI, CVBS</li>
-                                            <li class="card__item card__item_catalog">Объектив — f = 2.8 мм</li>
-                                            <li class="card__item card__item_catalog">Угол обзора — По горизонтали: 103°</li>
-                                            <li class="card__item card__item_catalog">Поддержка аудио — По коакс. кабелю (AoC)</li>
-                                            <li class="card__item card__item_catalog">Чувств. — Цвет: 0.01 lux/ ИК: 0 lux</li>
-                                            <li class="card__item card__item_catalog">Материал корпуса — Металл</li>
-                                            <li class="card__item card__item_catalog">Использование — Уличное</li>
-                                        </ul>
+                                    <div class="card__image-wrapper card__image-wrapper_catalog">
+                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                                        <img class="swiper-lazy" data-images data-src="./assets/images/catalog/hiwatch.jpg" src="./assets/images/plag.gif" alt="HiWatch DS-T200A" width="300" height="300">
                                     </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="catalog__card card">
-                                    <div class="card__image-wrapper card__image-wrapper_catalog"><img src="./assets/images/catalog/hiwatch.jpg" alt="HiWatch DS-T200A"></div>
-                                    <div class="card__title-wrapper card__title-wrapper_catalog">
-                                        <h3 class="card__title card__title_catalog">HiWatch DS-T200A<br>Камера WiFi уличная (2.8 mm)<br>3790 ₽ / шт</h3>
-                                        <p class="card__subtitle card__subtitle_catalog">Технические характеристики</p>
-                                        <ul class="card__list card__list_catalog">
-                                            <li class="card__item card__item_catalog">Матрица — 1/2.7 CMOS</li>
-                                            <li class="card__item card__item_catalog">Разрешение — 2,0 Мп (1920×1080)</li>
-                                            <li class="card__item card__item_catalog">Режимы работы — TVI, AHD, CVI, CVBS</li>
-                                            <li class="card__item card__item_catalog">Объектив — f = 2.8 мм</li>
-                                            <li class="card__item card__item_catalog">Угол обзора — По горизонтали: 103°</li>
-                                            <li class="card__item card__item_catalog">Поддержка аудио — По коакс. кабелю (AoC)</li>
-                                            <li class="card__item card__item_catalog">Чувств. — Цвет: 0.01 lux/ ИК: 0 lux</li>
-                                            <li class="card__item card__item_catalog">Материал корпуса — Металл</li>
-                                            <li class="card__item card__item_catalog">Использование — Уличное</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="catalog__card card">
-                                    <div class="card__image-wrapper card__image-wrapper_catalog"><img src="./assets/images/catalog/hiwatch.jpg" alt="HiWatch DS-T200A"></div>
-                                    <div class="card__title-wrapper card__title-wrapper_catalog">
-                                        <h3 class="card__title card__title_catalog">HiWatch DS-T200A<br>Камера WiFi уличная (2.8 mm)<br>3790 ₽ / шт</h3>
-                                        <p class="card__subtitle card__subtitle_catalog">Технические характеристики</p>
-                                        <ul class="card__list card__list_catalog">
-                                            <li class="card__item card__item_catalog">Матрица — 1/2.7 CMOS</li>
-                                            <li class="card__item card__item_catalog">Разрешение — 2,0 Мп (1920×1080)</li>
-                                            <li class="card__item card__item_catalog">Режимы работы — TVI, AHD, CVI, CVBS</li>
-                                            <li class="card__item card__item_catalog">Объектив — f = 2.8 мм</li>
-                                            <li class="card__item card__item_catalog">Угол обзора — По горизонтали: 103°</li>
-                                            <li class="card__item card__item_catalog">Поддержка аудио — По коакс. кабелю (AoC)</li>
-                                            <li class="card__item card__item_catalog">Чувств. — Цвет: 0.01 lux/ ИК: 0 lux</li>
-                                            <li class="card__item card__item_catalog">Материал корпуса — Металл</li>
-                                            <li class="card__item card__item_catalog">Использование — Уличное</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="catalog__card card">
-                                    <div class="card__image-wrapper card__image-wrapper_catalog"><img src="./assets/images/catalog/hiwatch.jpg" alt="HiWatch DS-T200A"></div>
-                                    <div class="card__title-wrapper card__title-wrapper_catalog">
-                                        <h3 class="card__title card__title_catalog">HiWatch DS-T200A<br>Камера WiFi уличная (2.8 mm)<br>3790 ₽ / шт</h3>
-                                        <p class="card__subtitle card__subtitle_catalog">Технические характеристики</p>
-                                        <ul class="card__list card__list_catalog">
-                                            <li class="card__item card__item_catalog">Матрица — 1/2.7 CMOS</li>
-                                            <li class="card__item card__item_catalog">Разрешение — 2,0 Мп (1920×1080)</li>
-                                            <li class="card__item card__item_catalog">Режимы работы — TVI, AHD, CVI, CVBS</li>
-                                            <li class="card__item card__item_catalog">Объектив — f = 2.8 мм</li>
-                                            <li class="card__item card__item_catalog">Угол обзора — По горизонтали: 103°</li>
-                                            <li class="card__item card__item_catalog">Поддержка аудио — По коакс. кабелю (AoC)</li>
-                                            <li class="card__item card__item_catalog">Чувств. — Цвет: 0.01 lux/ ИК: 0 lux</li>
-                                            <li class="card__item card__item_catalog">Материал корпуса — Металл</li>
-                                            <li class="card__item card__item_catalog">Использование — Уличное</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="catalog__card card">
-                                    <div class="card__image-wrapper card__image-wrapper_catalog"><img src="./assets/images/catalog/hiwatch.jpg" alt="HiWatch DS-T200A"></div>
-                                    <div class="card__title-wrapper card__title-wrapper_catalog">
-                                        <h3 class="card__title card__title_catalog">HiWatch DS-T200A<br>Камера WiFi уличная (2.8 mm)<br>3790 ₽ / шт</h3>
-                                        <p class="card__subtitle card__subtitle_catalog">Технические характеристики</p>
-                                        <ul class="card__list card__list_catalog">
-                                            <li class="card__item card__item_catalog">Матрица — 1/2.7 CMOS</li>
-                                            <li class="card__item card__item_catalog">Разрешение — 2,0 Мп (1920×1080)</li>
-                                            <li class="card__item card__item_catalog">Режимы работы — TVI, AHD, CVI, CVBS</li>
-                                            <li class="card__item card__item_catalog">Объектив — f = 2.8 мм</li>
-                                            <li class="card__item card__item_catalog">Угол обзора — По горизонтали: 103°</li>
-                                            <li class="card__item card__item_catalog">Поддержка аудио — По коакс. кабелю (AoC)</li>
-                                            <li class="card__item card__item_catalog">Чувств. — Цвет: 0.01 lux/ ИК: 0 lux</li>
-                                            <li class="card__item card__item_catalog">Материал корпуса — Металл</li>
-                                            <li class="card__item card__item_catalog">Использование — Уличное</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="catalog__card card">
-                                    <div class="card__image-wrapper card__image-wrapper_catalog"><img src="./assets/images/catalog/hiwatch.jpg" alt="HiWatch DS-T200A"></div>
                                     <div class="card__title-wrapper card__title-wrapper_catalog">
                                         <h3 class="card__title card__title_catalog">HiWatch DS-T200A<br>Камера WiFi уличная (2.8 mm)<br>3790 ₽ / шт</h3>
                                         <p class="card__subtitle card__subtitle_catalog">Технические характеристики</p>
@@ -296,9 +224,9 @@
             </section>
             <section id="services" class="main__services services">
                 <div class="container">
-                    <h2 class="services__title subtitle">Услуги по монтажу</h2>
+                    <h2 class="services__title subtitle animation">Услуги по монтажу</h2>
                     <div class="services__grid">
-                        <div class="services__card card">
+                        <div class="services__card card animationLeft">
                             <div class="card__image-wrapper card__image-wrapper_services card__image-wrapper_syssec"></div>
                             <div class="card__title-wrapper card__title-wrapper_services">
                                 <h3 class="card__title card__title_services">Монтаж<br>систем безопасности</h3>
@@ -308,7 +236,7 @@
                                     которое обеспечит полную защиту от проникновения злоумышленников на вашу территорию.</p>
                             </div>
                         </div>
-                        <div class="services__card card">
+                        <div class="services__card card animation">
                             <div class="card__image-wrapper card__image-wrapper_services card__image-wrapper_sysvideo"></div>
                             <div class="card__title-wrapper card__title-wrapper_services">
                                 <h3 class="card__title card__title_services">Монтаж<br>систем видеонаблюдения</h3>
@@ -318,7 +246,7 @@
                                     чтобы она соответствовала всем вашим требованиям</p>
                             </div>
                         </div>
-                        <div class="services__card card">
+                        <div class="services__card card animationRight">
                             <div class="card__image-wrapper card__image-wrapper_services card__image-wrapper_scs"></div>
                             <div class="card__title-wrapper card__title-wrapper_services">
                                 <h3 class="card__title card__title_services">Монтаж<br>СКС</h3>
@@ -327,7 +255,7 @@
                                     а также эффективное управление всей инфраструктурой связи.</p>
                             </div>
                         </div>
-                        <div class="services__card card">
+                        <div class="services__card card animationLeft">
                             <div class="card__image-wrapper card__image-wrapper_services card__image-wrapper_scud"></div>
                             <div class="card__title-wrapper card__title-wrapper_services">
                                 <h3 class="card__title card__title_services">Установка<br>СКУД</h3>
@@ -336,7 +264,7 @@
                                     чтобы вы могли быть уверены в безопасности своего бизнеса. Защитите свой бизнес уже сегодня!</p>
                             </div>
                         </div>
-                        <div class="services__card card">
+                        <div class="services__card card animation">
                             <div class="card__image-wrapper card__image-wrapper_services card__image-wrapper_vols"></div>
                             <div class="card__title-wrapper card__title-wrapper_services">
                                 <h3 class="card__title card__title_services">Сварка<br>ВОЛС</h3>
@@ -346,7 +274,7 @@
                                     чтобы провести работу качественно и быстро.</p>
                             </div>
                         </div>
-                        <div class="services__card card">
+                        <div class="services__card services__card_steps card animationRight">
                             <div class="card__image-wrapper card__image-wrapper_services"></div>
                             <div class="card__title-wrapper card__title-wrapper_services card__title-wrapper_services-list">
                                 <h3 class="card__title card__title_services">Легко и быстро</h3>
@@ -365,7 +293,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="services__ticker ticker">
+                <div class="services__ticker_garant ticker">
                     <div class="ticker__wrapper">
                         <div class="ticker__item">Гарантия на работу и системы 1 год</div>
                         <div class="ticker__item">Гарантия на работу и системы 1 год</div>
@@ -373,14 +301,24 @@
                         <div class="ticker__item">Гарантия на работу и системы 1 год</div>
                     </div>
                 </div>
+                <div class="services__ticker_free ticker">
+                    <div class="ticker__wrapper">
+                        <div class="ticker__item">Выезд на замер и рассчет бесплатно</div>
+                        <div class="ticker__item">Выезд на замер и рассчет бесплатно</div>
+                        <div class="ticker__item">Выезд на замер и рассчет бесплатно</div>
+                        <div class="ticker__item">Выезд на замер и рассчет бесплатно</div>
+                        <div class="ticker__item">Выезд на замер и рассчет бесплатно</div>
+                        <div class="ticker__item">Выезд на замер и рассчет бесплатно</div>
+                    </div>
+                </div>
             </section>
             <section id="contact" class="main__contact contact">
-                <div class="container animation">
+                <div class="container">
                     <div class="contact__row">
-                        <h2 class="contact__title subtitle">Связаться с нами</h2>
+                        <h2 class="contact__title subtitle animation">Связаться с нами</h2>
                         <div class="contact__wrapper">
                             <div class="contact__contact-block">
-                                <div class="contact__social social">
+                                <div class="contact__social social animation">
                                     <ul class="social__list">
                                         <li>
                                             <a class="social__item" href="tel:+79180865982">
@@ -414,8 +352,8 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <p class="contact__contact-description">Неудобно сейчас?<br>Оставьте свои контакты и мы перезвоним.</p>
-                                <div class="contact__form-container form-container">
+                                <p class="contact__contact-description animation">Неудобно сейчас?<br>Оставьте свои контакты и мы перезвоним.</p>
+                                <div class="contact__form-container form-container animation">
                                     <div class="form-preloader"></div>
                                     <form class="ajax-contact-form contact__form form" action="#">
                                         <div class="form__input">
@@ -439,8 +377,8 @@
                 </div>
                 <div class="form-callback"></div>
             </section>
-            <section class="main__map map">
-                <div class="animation" id="map"></div>
+            <section class="main__map map animation">
+                <div id="map"></div>
             </section>
             <div class="button-up _hidden-button">
                 <button class="button-up__btn"></button>
@@ -449,15 +387,16 @@
         <footer class="footer">
             <div class="container">
                 <div class="footer__wrapper animation">
-                    <div class="@@class-logo-wrapper-footer logo">
-                        <a class="footer__logo-link-footer logo__link-footer"><img src="./assets/images/logo-footer.svg" alt="ВидеоСтраж"></a>
-                    </div>
+
+                    <!--			'class-wrapper': 'footer__logo',-->
+                    <!--			'class-logo-link': 'footer__logo-link'-->
+                    <!--			})-->
                     <div class="footer__requisites">
-                        <p class="ip">ОГРН ИП 321237500458724</p>
-                        <p class="info">Сайт носит информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями ст. 437(2) Гражданского кодекса РФ.</p>
+                        <p>Сайт носит информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями ст. 437(2) Гражданского кодекса РФ.</p>
                         <p><a title="Политика конфиденциальности" target="_blank" href="../../privacy.html">Политика конфиденциальности</a></p>
                     </div>
                     <div class="footer__copyright">
+                        <p>ОГРН ИП 321237500458724</p>
                         <p>© ohransystem.ru, 2023</p>
                         <address class="footer__author"><a title="Телеграм автора автора сайта" href="https://t.me/efremandre">разработано efremandre</a></address>
                     </div>

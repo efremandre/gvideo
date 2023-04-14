@@ -36,14 +36,18 @@
     margin: 1em 0;
   }
 
+  &__slider-container {
+    position: relative;
+  }
+
   &__card {
-    height: 500px;
     max-width: 380px;
   }
 }
 
 .card {
   &__image-wrapper_catalog {
+    margin-bottom: 110px;
     padding: 40px;
   }
 

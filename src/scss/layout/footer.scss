@@ -19,16 +19,13 @@
 
   &__wrapper {
     @include mix.displayFlex(flex, space-between, center);
-  }
-
-  &__logo-link {
-    color: var.$lightColor;
+    margin: 0 -1em;
   }
 
   &__requisites {
     padding: 0 1em;
-    text-align: center;
-    flex: 0 1 500px;
+    text-align: left;
+    flex: 0 1 50%;
     &>p>a {
       display: inline-block;
       margin-top: 4px;
@@ -39,9 +36,10 @@
     }
   }
 
-  .info {
-    @include mix.adaptivFont(12, 8);
-    line-height: 1;
+
+  &__copyright {
+    flex: 0 1 auto;
+    padding: 0 1em;
   }
 
   &__author {

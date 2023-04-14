@@ -27,9 +27,26 @@
   &__card {
     height: 300px;
   }
+
+  &__card_steps {
+    @media (any-hover: hover) {
+        &:hover {
+          cursor: auto;
+        }
+    }
+  }
+
+  &__ticker_free {
+
+  }
 }
 
 .card {
+  &__image-wrapper {
+    height: 100%;
+    width: 100%;
+  }
+
   &__image-wrapper_services {
     padding: 0;
   }
@@ -39,38 +56,26 @@
   }
   
   &__image-wrapper_syssec {
-    height: 100%;
-    width: 100%;
     background: var.$accentColorTwo url("../../assets/images/services/smartsystem.jpg") center center/ cover no-repeat;
   }
 
   &__image-wrapper_syssec {
-    height: 100%;
-    width: 100%;
     background: var.$accentColorTwo url("../../assets/images/services/smartsystem.jpg") center center/ cover no-repeat;
   }
 
   &__image-wrapper_sysvideo {
-    height: 100%;
-    width: 100%;
     background: var.$accentColorTwo url("../../assets/images/services/videosys.jpg") center center/ cover no-repeat;
   }
 
   &__image-wrapper_scs {
-    height: 100%;
-    width: 100%;
     background: var.$accentColorTwo url("../../assets/images/services/scs.jpg") center center/ cover no-repeat;
   }
 
   &__image-wrapper_scud {
-    height: 100%;
-    width: 100%;
     background: var.$accentColorTwo url("../../assets/images/services/scut.jpg") center center/ cover no-repeat;
   }
 
   &__image-wrapper_vols {
-    height: 100%;
-    width: 100%;
     background: var.$accentColorTwo url("../../assets/images/services/vols.jpg") center center/ cover no-repeat;
   }
   

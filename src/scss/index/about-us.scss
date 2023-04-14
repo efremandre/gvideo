@@ -11,11 +11,12 @@
 .about-us {
   &__row {
     @include mix.displayFlex(flex, start, start);
+    flex-direction: row-reverse;
     margin: 0 -2em;
   }
 
   &__content {
-    flex: 0 1 60%;
+    flex: 0 1 55%;
     padding: 0 2em;
   }
   
@@ -26,19 +27,24 @@
 
   &__text {
     margin: 1.5em 0;
-    padding-right: 2em;
     &>p {
       color: var.$lightColor;
       margin-bottom: 1em;
     }
   }
 
-  &__image {
-    flex: 0 1 40%;
-    min-height: 480px;
-    padding: 0 2em;
+  &__image-wrapper {
+    flex: 0 1 45%;
+    height: 400px;
     overflow: hidden;
-    border-radius: 8px;
-    background: #fff url('../../assets/images/imageabout.jpg') center center / cover no-repeat;
+    padding: 0 2em 0 0;
+
+    &>img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
   }
+
 }

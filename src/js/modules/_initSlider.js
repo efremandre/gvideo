@@ -1,18 +1,15 @@
 'use strict';
-import Swiper, {Navigation, Pagination, Autoplay, FreeMode, Keyboard} from 'swiper';
+import Swiper, {Navigation, Pagination, Autoplay, FreeMode, Keyboard, Lazy} from 'swiper';
 export function initSlider() {
 	const port = new Swiper('.mySwiper', {
-		modules:[Navigation, Pagination, Autoplay, FreeMode, Keyboard],
+		modules:[Navigation, Pagination, Autoplay, FreeMode, Keyboard, Lazy],
+		lazy: true,
 		loop: true,
 		speed: 1000,
 		pagination: {
 			el: '.swiper-pagination',
 			clickable: true,
 			dynamicBullets: true
-		},
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
 		},
 		autoplay: {
 			delay: 10000,
@@ -21,9 +18,20 @@ export function initSlider() {
 			enabled: true,
 		},
 		breakpoints: {
+			319: {
+				slidesPerView: 1,
+			},
 			569: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			769: {
 				slidesPerView: 3,
-				spaceBetween: 30
+				spaceBetween: 30,
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
 			},
 		},
 	});

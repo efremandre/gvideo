@@ -34,6 +34,42 @@
 
 @media screen and (max-width: 989.98px) {
 
+  .main {
+    &__about-us {
+      padding: 2em 0;
+    }
+  }
+
+  .about-us {
+    &__row {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      margin: 0;
+    }
+
+    &__content {
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__text {
+      margin: 1em 0 1.5em 0;
+      &>p {
+
+      }
+    }
+
+    &__image-wrapper {
+      padding: 0;
+    }
+
+    &__buttons {
+      display: none;
+    }
+  }
 }
 
 @media screen and (max-width: 769.98px) {
@@ -80,6 +116,34 @@
       }
     }
   }
+
+  .about-us {
+    &__row {
+      margin: 0;
+    }
+
+    &__content {
+
+    }
+
+    &__title {
+
+    }
+
+    &__text {
+      &>p {
+
+      }
+    }
+
+    &__image-wrapper {
+
+    }
+
+    &__image {
+
+    }
+  }
 }
 
 @media screen and (max-width: 569.98px) {
@@ -111,12 +175,26 @@
   .main-bcard {
     padding: 1em;
   }
+
+  .footer {
+    &__logo {
+      display: block;
+      flex: 0 1 100px;
+    }
+  }
 }
 
 @media screen and (max-width: 429.98px) {
 
   .fullscreen {
 
+  }
+
+  .footer {
+
+    &__wrapper {
+      display: block;
+    }
   }
 
 }
