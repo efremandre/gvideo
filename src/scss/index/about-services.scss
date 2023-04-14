@@ -32,12 +32,17 @@
     }
   }
 
-  &__image {
+  &__image-wrapper {
     flex: 0 1 40%;
-    min-height: 400px;
+    height: 400px;
     padding: 0 2em;
     overflow: hidden;
-    border-radius: 8px;
-    background: #fff url('../../assets/images/mont.jpg') center center / cover no-repeat;
+
+    &>img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
   }
 }

@@ -2181,13 +2181,17 @@ a:focus {
   color: #fff;
   margin-bottom: 1em;
 }
-.about-services__image {
+.about-services__image-wrapper {
   flex: 0 1 40%;
-  min-height: 400px;
+  height: 400px;
   padding: 0 2em;
   overflow: hidden;
+}
+.about-services__image-wrapper > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
   border-radius: 8px;
-  background: #fff url("../assets/images/mont.jpg") center center/cover no-repeat;
 }
 
 .main__services {
@@ -2561,7 +2565,7 @@ a:focus {
   }
 }
 @media screen and (max-width: 989.98px) {
-  .main__about-us {
+  .main__about-us, .main__about-services {
     padding: 2em 0;
   }
   .about-us__row {
@@ -2581,6 +2585,21 @@ a:focus {
   }
   .about-us__buttons {
     display: none;
+  }
+  .about-services__row {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+  }
+  .about-services__title {
+    text-align: center;
+  }
+  .about-services__text {
+    margin-bottom: 1.5em;
+  }
+  .about-services__button {
+    margin: 0 auto;
   }
 }
 @media screen and (max-width: 769.98px) {

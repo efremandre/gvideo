@@ -35,7 +35,8 @@
 @media screen and (max-width: 989.98px) {
 
   .main {
-    &__about-us {
+    &__about-us,
+    &__about-services {
       padding: 2em 0;
     }
   }
@@ -68,6 +69,42 @@
 
     &__buttons {
       display: none;
+    }
+  }
+
+  .about-services {
+    &__row {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      margin: 0;
+    }
+
+    &__content {
+
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__text {
+      margin-bottom: 1.5em;
+      &>p {
+
+      }
+    }
+
+    &__image-wrapper {
+
+
+      &>img {
+        
+      }
+    }
+
+    &__button {
+      margin: 0 auto;
     }
   }
 }
