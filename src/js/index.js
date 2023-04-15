@@ -8,6 +8,7 @@ import { pressDawn } from "./modules/_pressDawn.js";
 import { pressUp } from "./modules/_pressUp.js";
 import { sendForm } from "./modules/_form.js";
 import {animationBcard} from "./modules/_animationBcard.js";
+import {openDescriptCard} from "./modules/_openDescriptCard().js";
 
 hello();
 map();
@@ -19,3 +20,4 @@ pressDawn();
 pressUp();
 sendForm();
 animationBcard();
+openDescriptCard();

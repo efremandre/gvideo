@@ -1553,6 +1553,12 @@ a:focus {
   }
 }
 
+.card._open .card__title-wrapper {
+  transform: translateY(0);
+  border-radius: 0;
+  background: rgba(14, 46, 74, 0.9);
+}
+
 .ticker {
   position: relative;
   overflow: hidden;
