@@ -24,14 +24,14 @@ export function initSlider() {
 			569: {
 				slidesPerView: 2,
 				spaceBetween: 20,
-				navigation: {
-					nextEl: '.swiper-button-next',
-					prevEl: '.swiper-button-prev',
-				},
 			},
 			989: {
 				slidesPerView: 3,
 				spaceBetween: 30,
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				}
 			},
 		},
 	});

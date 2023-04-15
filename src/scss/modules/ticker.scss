@@ -5,20 +5,20 @@
   position: relative;
   overflow: hidden;
   padding: .5em 0;
-}
 
-.ticker__wrapper {
-  display: flex;
-}
+  &__wrapper {
+    display: flex;
+  }
 
-.ticker__item {
-  color: var.$lightColor;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 130%;
-  white-space: nowrap;
-  flex-shrink: 0;
-  padding: 0 50px;
+  &__item {
+    color: var.$lightColor;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 130%;
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 0 50px;
+  }
 }
 
 .services__ticker_garant {
